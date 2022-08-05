@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CategoriaRepository extends JpaRepository {
+public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
     public List<Categoria> getAllByDescricaoContainingIgnoreCase(@Param("descricao") String descricao);
 }
